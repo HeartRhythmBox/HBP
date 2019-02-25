@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:600|Raleway|IM+Fell+English" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+<style>
+.gradient{width: 100%;height: 100vh;text-align: center;
+background-image: radial-gradient(farthest-side at 70% 5%, #FDE570, #FAE25F, #FACF1A,#F0BC18)}
+
+.sanB {font-family: 'Montserrat', sans-serif;}
+.san {font-family: 'Raleway', sans-serif;}
+.serif {font-family: 'IM Fell English', serif;}
+
+.pointer {
+    cursor: pointer;
+    height: 0.5em;
+    width: 0.5em;
+    background-color: #fc553d;
+    border-radius: 50%;
+    position: fixed;  
+    z-index: 1;
+    animation: blink 1.5s linear infinite;
+    }
+    @keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: 0.7}
+    100%{opacity: 1;}
+    }
+
+.next {
+    position: absolute; display: inline;
+    left: 98vw; 
+    background-color: transparent;
+    color: transparent;
+}
+
+
+.noLine {text-decoration: none}
+
+.menu {font-family: 'Montserrat', sans-serif;font-size: 2.5vmax;width: fit-content;
+color:#b6dcfa;padding:0.5vmax;position: fixed;z-index: 3;display: none;
+  top: 0.5vmax;left: 0.5vmax;text-align: center;cursor: pointer;
+  }
+.menuIcon :hover, .menuItem:hover {opacity: 0.7}
+
+.hideItem {font-size: 2.5vmax;display: none;color: #0B3976;}
+.menuItem {padding: 0.5vmax;background-color: #e1ded7;font-size: 1.8vmax;margin-top: 0.1vh;}
+.menuItem a {text-decoration: none}
+
+.block {margin: 3vh 0;position: relative;padding-top:5vh;}
+.blockHolder  {margin: 0 3vw;border-radius: 1vw;padding: 1vmax}
+.eyebrow {height: 1vh;margin: 1vh 1vw;width: 15%;
+background: linear-gradient(to right,#45CAF7,#cbe6fb,#ece6df,#cfc1af)}
+.topic {margin-left: 1vmax;font-size: 0;font-family: 'Raleway', sans-serif;}
+.topic :first-child {color: #2E80EC;font-size: 2vmax;}
+.topic :nth-child(2) {color:#b29c7f;font-size:2vmax}
+.imgSec {padding: 5vh 2vw}
+.headline {padding:2vmax 3vmax 0.5vmax 3vmax;font-family: 'Karma', serif;color:#0B3976;
+font-size: 3vmax;line-height: 100%}
+.text {color: #888888;font-family: 'Raleway', sans-serif;line-height: 120%;font-size: 2vmax;
+        padding: 0.5vmax 3vmax}
+
+.firstL {font-size: 4vmax;color: #2E80EC}
+.ref {font-family: 'Karma', serif;font-size: 1vmax;color: #969696}
+.hoverBlue li:hover {color: #2E80EC;}
+.largeImg {max-height:80vh;overflow-y: scroll}
+.largeImg :first-child {width: 90%}
+.bText {color:#b29c7f;font-weight:700}
+
+.conclusion {min-height: 100vh;background: linear-gradient(to top right,#45CAF7,#76d8f9,#cbe6fb,#ece6df,#e2dacf)}
+.cutoutTxt {border: 0.2vmin white solid;background:white;mix-blend-mode:screen;font-size: 3vmax;
+    font-family: 'Montserrat', sans-serif;}
+
+</style>
+
+<!--home-->
+<div id="Top" class="block" style="padding:0;margin:0;background:transparent"></div>
+<div class="gradient w3-row">
+    <div class="w3-col s5" style="padding-top: 20%;text-align: right">
+        <div style="text-align: right;margin-right: -2vmax" class="serif">
+            <span style="font-size: 5vmax;line-height: 100%;color: white">His Bundle<br>
+            Pacing</span><br><br>
+            <a href="https://www.facebook.com/HeartRhythmBox" class="noLine san" target="_blank" 
+            style="font-size: 1.2vmax; color: #969696">
+                <i class="fab fa-facebook-square" style="font-size:1.2vmax;color: #969696;"></i>
+                HeartRhythmBox
+            </a>
+        </div>
+    </div>
+    <div class="w3-col s7" style="text-align: left;margin-left: -2vmax">
+    <img src="conduction.png" style="width: 100%;max-height:100vh;overflow: hidden;">  
+    </div>
+</div>
+
+<!--menu-->
+<div class="menu">
+    <div class="w3-bar">
+        <div class="w3-bar-block  menuIcon" onclick="showMenu()">
+        <i class="fab fa-creative-commons-nd" style="text-shadow:rgba(203, 230, 251, 0.6) 1px 1px 10px"></i>
+        </div></div>
+
+    <!--onclick-->
+    <div class="hideItem w3-bar w3-center">
+    <div class="w3-bar-block"><i class="fas fa-chevron-circle-down" onclick="hideMenu()"></i></div>
+    <div class="w3-bar-block menuItem" title="guidelines">
+        <a href="#glines">G</a></div>
+    <div class="w3-bar-block menuItem" title="trials">
+        <a href="#trial">T</a></div>
+    <div class="w3-bar-block menuItem" title="@HeartRhythmBox">
+        <a href="https://www.facebook.com/HeartRhythmBox" class="noLine" target="_blank">
+            <i class="fab fa-facebook-square"></i></a></div>
+    <div class="w3-bar-block menuItem" title="to Top">
+        <a href="#Top"><i class="fas fa-arrow-circle-up"></i></a>
+    </div>
+    </div>
+    </div>
+    
+</div>
+
+<!--start pointer-->
+<div onclick="pointer()"><span class="pointer" style="display: none"></span> 
+<!--guidelines- intro-->
+<div id="glines" class="block">
+    <div class="blockHolder gradient2">
+    <div class="eyebrow"></div>
+    <div class="topic">
+        <span>Guidelines ></span>
+        <span>> ACC & Nice</span>
+    </div>
+    <div class="imgSec w3-row w3-center w3-border-bottom">
+        <div class="w3-col s6">
+        <a href="https://www.ahajournals.org/doi/abs/10.1161/CIR.0000000000000509" target="_blank">
+            <img src="media/ACC/paper.png" style="width:100%"></a></div>
+        <div class="w3-col s6 w3-leftbar">
+        <a href="https://www.nice.org.uk/guidance/ng106" target="_blank">
+            <img src="media/NICE/paper.png" style="width:100%"></a></div>
+    </div>
+    <div class="headline">
+       ACC and NICE published their new guidelines last year and this year respectively.
+    </div>
+    <div class="text">
+        Minor dissimiarlities do occur, of course.
+    </div>
+    <div class="w3-btn next" onmouseover="blockNav(1)"></div>
+    </div>
+</div>
+
+
+<!--end pointer-->
+</div>
+
+<div class="w3-row w3-center san" style="font-size: 1.1vmax;color:#868686">
+    <a href="https://heartrhythmbox.github.io/main/" target="_blank" style="text-decoration:none">
+        <img src="box transparent.png" style="width:1.3vmax">
+        HeartRhythmBox: Main Page
+    </a> <span style="color:black"> &#9679; </span>
+    <a href="#top" style="text-decoration:none;color:black">&uArr; to top</a>
+    <span style="color:black"> &#9679; </span>
+    <a href="https://www.facebook.com/HeartRhythmBox" style="text-decoration:none" target="_blank">
+        <i class="fab fa-facebook-square" style="color:#2E80EC;font-size: 1.2vmax"></i>
+        FB: @HeartRhythmBox
+    </a>
+
+</div>
+
+
+
+<script src="block navigation.js" ></script>
+<script>
+
+window.addEventListener("keydown", function(event) {
+        event.preventDefault();
+        if (event.keyCode===32) {
+        var p = document.getElementsByClassName("pointer");
+        p[0].style.display = "none";}
+    })
+
+//up arrow
+window.addEventListener("keydown", function(event) {
+    event.preventDefault();
+    if (event.keyCode===38) {
+    blockNav(-1)}
+})
+//down arrow
+window.addEventListener("keydown", function(event) {
+    event.preventDefault();
+    if (event.keyCode===40) {
+    blockNav(1)}
+})
+
+window.addEventListener("keydown", function(event) {
+        event.preventDefault();
+        if (event.keyCode===27) {
+        window.unblur()}
+    })
+
+window.onload = function () {unblur()};
+window.ontouchmove = function () {unblur()};
+window.onscroll = function () {scroll()};
+
+
+function pointer() {
+    var x = event.clientX;
+    var y = event.clientY;
+    var p = document.getElementsByClassName("pointer");
+    p[0].style.display = "inline";
+    p[0].style.left = x+"px"; 
+    p[0].style.top = y+"px";
+    }
+
+//show menu
+
+function showMenu() {
+    unblur();
+    var icon = document.getElementsByClassName('menuIcon');
+    icon[0].style.display="none";
+    var hide = document.getElementsByClassName('hideItem');
+    hide[0].style.display="block";
+}
+
+function hideMenu() {
+    var icon = document.getElementsByClassName('menuIcon');
+    var hide = document.getElementsByClassName('hideItem');
+    hide[0].style.display="none";
+    icon[0].style.display="block";
+}
+
+function scroll() {
+    menu = document.getElementsByClassName("menu");
+    block = document.getElementsByClassName('block');
+    l = (block.length)-1;
+    hideMenu();   
+    if (window.pageYOffset>=window.innerHeight && (window.pageYOffset<block[l].offsetTop)){
+        menu[0].style.display="block"}
+    else {
+        menu[0].style.display="none"}
+}
+
+</script>	
+
+</body>
+</html>
