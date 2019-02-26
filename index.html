@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed|Raleway|IM+Fell+English" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway|IM+Fell+English" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 </head>
@@ -11,7 +11,7 @@
 .gradient{width: 100%;height: 100vh;text-align: center;
 background-image: radial-gradient(farthest-side at 70% 35%, #FDE570, #FAE25F, #FACF1A,#F0BC18)}
 
-.sanB {font-family: 'Open Sans Condensed', sans-serif;}
+.sanB {font-family: 'Lato', sans-serif;}
 .san {font-family: 'Raleway', sans-serif;}
 .serif {font-family: 'IM Fell English', serif;}
 .blue {color: #3F69F0}
@@ -51,7 +51,7 @@ background-image: radial-gradient(farthest-side at 70% 35%, #FDE570, #FAE25F, #F
 
 .block {position: relative;padding:5vh 1vmin;}
 .menu {color:#ddd;cursor: pointer;padding:0.5vmax;font-size: 1.2vmax}
-.mItem {font-family: 'Open Sans Condensed', sans-serif;font-size: 1.3vmax;cursor: pointer;background-color:#f1f1f1;
+.mItem {font-family: 'Lato', sans-serif;font-size: 1.3vmax;cursor: pointer;background-color:#f1f1f1;
         padding: 0.3vmax;margin-right: 0.5vmax;display: none;color:#888}
 .ref{font-size:1vmax;color: #969696;font-family: 'Raleway', sans-serif;padding-top:0.5vmax}
 
@@ -93,9 +93,14 @@ background-image: radial-gradient(farthest-side at 70% 35%, #FDE570, #FAE25F, #F
 <div class="block">
     <div class="w3-row serif" style="padding-left: 0.5vmax;color: #555555;font-size: 1.8vmax;">
         <i class="fas fa-bars menu w3-hover-text-grey" title="menu" onclick="showMenu(0)"></i>
+        <!--menu-->
         <span class="mItem">
-            <span><i class="fas fa-arrow-circle-up" title="to Top"></i></span>&nbsp;&bullet;
-            <span><i class="fab fa-facebook-square" title="FB: @HeartRhythmBox"></i></span>&nbsp;&bullet;
+            <span  onclick="showMenu(0)"><a href="#top">
+                <i class="fas fa-arrow-circle-up" title="to Top"></i></a></span>&nbsp;&bullet;
+            <span  onclick="showMenu(0)"><a href="https://www.facebook.com/HeartRhythmBox" 
+                class="noLine" target="_blank">
+                <i class="fab fa-facebook-square" title="FB: @HeartRhythmBox"></i></a>
+            </span>&nbsp;&bullet;
             <span class="pointerSwitch" onclick="pointerSwitch(0)">turn on pointer</span>
         </span>
         <span id="BlkNoBar">
@@ -103,6 +108,8 @@ background-image: radial-gradient(farthest-side at 70% 35%, #FDE570, #FAE25F, #F
         <span style="background-color: #555;color:white"> &nbsp;&nbsp;10&nbsp;&nbsp;</span>
         </span>
     </div>    
+
+    <!--content-->
     <div class="w3-row" style="background-color:#FAE25F">
         <div class="w3-cell w3-cell-middle w3-mobile serif" style="font-size:3vmax;padding: 1.2vmax;">
             Only His bundle pacing is able to provide physiological pacing.
