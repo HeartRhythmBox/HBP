@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:600|Raleway|IM+Fell+English" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|IM+Fell+English" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 </head>
@@ -49,28 +49,9 @@ background-image: radial-gradient(farthest-side at 70% 35%, #FDE570, #FAE25F, #F
         padding:0.5vmax 1vmax 0.5vmax 2vmax;border-top:#969696 solid 0.1vmin; 
         border-bottom:#969696 solid 0.1vmin;display: none}
 
-.menu {font-family: 'Montserrat', sans-serif;font-size: 2.5vmax;width: fit-content;
-color:#b6dcfa;padding:0.5vmax;position: fixed;z-index: 3;display: none;
-  top: 0.5vmax;left: 0.5vmax;text-align: center;cursor: pointer;
-  }
-.menuIcon :hover, .menuItem:hover {opacity: 0.7}
+.block {position: relative;padding:5vh 1vmin;}
+.menu {color:#ddd;cursor: pointer;padding:0.5vmax;font-size: 1.5vmax}
 
-.hideItem {font-size: 2.5vmax;display: none;color: #0B3976;}
-.menuItem {padding: 0.5vmax;background-color: #e1ded7;font-size: 1.8vmax;margin-top: 0.1vh;}
-.menuItem a {text-decoration: none}
-
-.block {margin: 3vh 0;position: relative;padding-top:5vh;}
-.blockHolder  {margin: 0 3vw;border-radius: 1vw;padding: 1vmax}
-.eyebrow {height: 1vh;margin: 1vh 1vw;width: 15%;
-background: linear-gradient(to right,#45CAF7,#cbe6fb,#ece6df,#cfc1af)}
-.topic {margin-left: 1vmax;font-size: 0;font-family: 'Raleway', sans-serif;}
-.topic :first-child {color: #2E80EC;font-size: 2vmax;}
-.topic :nth-child(2) {color:#b29c7f;font-size:2vmax}
-.imgSec {padding: 5vh 2vw}
-.headline {padding:2vmax 3vmax 0.5vmax 3vmax;color:#0B3976;
-font-size: 3vmax;line-height: 100%}
-.text {color: #888888;font-family: 'Raleway', sans-serif;line-height: 120%;font-size: 2vmax;
-        padding: 0.5vmax 3vmax}
 
 
 
@@ -79,10 +60,10 @@ font-size: 3vmax;line-height: 100%}
 <!--home-->
 <div id="Top" class="block" style="padding:0;margin:0;background:transparent"></div>
 <div class="gradient w3-row">
-    <div class="w3-col s12 m7 l7">
+    <div class="w3-col w3-mobile s12 m7 l7">
         <img src="conduction.png" style="width: 100%;max-height:100vh;overflow: hidden;padding-top: 5%">  
         </div>
-    <div class="w3-col s12 m5 l5">
+    <div class="w3-col w3-mobile s12 m5 l5">
         <div class="serif title" onmouseover="showDebateT(1)" onmouseout="showDebateT(0)">
         His Bundle<br>Pacing
             <div class="debateT">
@@ -105,31 +86,27 @@ font-size: 3vmax;line-height: 100%}
 
 <!--start pointer-->
 <div onclick="pointer()"><span class="pointer" style="display: none"></span> 
-<!--guidelines- intro-->
+
+<!--block 0-->
 <div class="block">
-    <div class="blockHolder gradient2">
-    <div class="eyebrow"></div>
-    <div class="topic">
-        <span>Guidelines ></span>
-        <span>> ACC & Nice</span>
+    <div class="w3-row serif" style="padding-left: 1vmax;color: #555;font-size: 1.8vmax;">
+        <i class="fas fa-ellipsis-v menu w3-hover-text-grey"></i>
+        <span style="background-color: #FACF1A"> &nbsp;&nbsp;01&nbsp; </span>
+        <span style="background-color: #555;color:white"> &nbsp;&nbsp;10&nbsp;&nbsp;</span>
+    </div>    
+    <div class="w3-container w3-center w3-padding" style="background-color: #f3f3f3;">
+        <img src="media/HBPvsCRTECG.png" style="max-height: 80vh;max-width: 100%">
+
     </div>
-    <div class="imgSec w3-row w3-center w3-border-bottom">
-        
-    </div>
-    <div class="headline">
-       ACC and NICE published their new guidelines last year and this year respectively.
-    </div>
-    <div class="text">
-        Minor dissimiarlities do occur, of course.
-    </div>
+    
     <div class="w3-btn next" onmouseover="blockNav(1)"></div>
-    </div>
 </div>
 
 
 <!--end pointer-->
 </div>
 
+<!--bottom bar-->
 <div class="w3-row w3-center san" style="font-size: 1.1vmax;color:#868686">
     <a href="https://heartrhythmbox.github.io/main/" target="_blank" style="text-decoration:none">
         <img src="box transparent.png" style="width:1.3vmax">
