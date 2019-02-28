@@ -65,8 +65,6 @@ cursor: pointer;}
     .noMobile {display: none}
 }
 
-
-
 </style>
 
 <!--home-->
@@ -192,8 +190,9 @@ cursor: pointer;}
 
     <!--content-->
     
+    <!--base-->
     <div class="w3-row w3-padding san" style="line-height: 2.5vmax;">
-        <!--base-->    
+            
         <!--c0#0-->
         <div class="w3-col w3-padding w3-mobile curtain0" style="background:#FAE25F;">
             <img src="media/longDissoc.png" style="width:100%">
@@ -227,15 +226,17 @@ cursor: pointer;}
                 </a>
             </div>
         </div>
+    </div>
+        
+    <!--click0-->
+    <div class="w3-row w3-padding san curtain0H">
     
-        <!--click0-->
-        <div class="curtain0H">
         <div class="w3-col s12 m10 l10 w3-padding w3-mobile hidden" style="background:#FAE25F;">
             <div class="w3-row">
             <div class="w3-cell w3-padding">
-                <img src="media/longDissoc.png" style="width: 100%"></div>
+                <img src="media/longDissoc.png" style="max-height: 75vh;max-width: 100%"></div>
             <div class="w3-cell w3-padding">
-                <img src="media/TracingHBPinLBBB.png" style="width: 100%">
+                <img src="media/TracingHBPinLBBB.png" style="max-height: 75vh;max-width: 100%">
             </div>
                 <div>The conduction system is perfectly designed.</div>
             <div class="ref">
@@ -247,34 +248,51 @@ cursor: pointer;}
 
         <div class="w3-col s0 m1 l1 w3-padding hidden" style="background:#5ffae2;"></div>
         <div class="w3-col s0 m1 l1 hidden" style="background:#fa5f77;border: none"></div>
-        </div>
+       
+    </div>
 
-        <!--click1-->
-        <div class="curtain0H">
+    <!--click1-->
+    <div class="w3-row w3-padding san curtain0H">
+       
         <div class="w3-col s0 m1 l1 w3-padding hidden" style="background:#FAE25F;"></div>
-        <div class="w3-col s12 m10 l10 w3-padding hidden " style="background:#5ffae2;">
-            <div class="w3-cell w3-padding w3-cell-middle">
-            <img src="media/mechHisCapture.png" style="width:100%"></div>
-            <div class="w3-cell w3-padding w3-cell-middle">
-            <div style="margin-top:1vmax;">In complete heart block, the block mostly remains within the bundle of His.</div>
+        <div class="w3-col w3-center s12 m10 l10 w3-padding hidden " style="background:#5ffae2;">
+            <img src="media/mechHisCapture.png" style="max-height: 75vh;max-width: 100%" >
+            <br>            
+            In complete heart block, the block mostly remains within the bundle of His.
             <div class="ref">
                 <a href="https://www.sciencedirect.com/science/article/pii/S0022073616300814?via%3Dihub" target="_blank">
-                Vijayaraman P. J Electrocardiol 2016.
-                </a>
-            </div></div>
+                    Vijayaraman P. J Electrocardiol 2016.
+                </a>    
+            </div>            
         </div>
-        
+               
         <div class="w3-col s0 m1 l1 hidden" style="background:#fa5f77;border: none"></div>
-        </div>
+        
+    </div>
 
-        <!--click2-->
+    <!--click2-->
+    <div class="w3-row w3-padding san curtain0H">
+       
+        <div class="w3-col s0 m1 l1 w3-padding hidden" style="background:#FAE25F;"></div>
+        <div class="w3-col s0 m1 l1 w3-padding hidden" style="background:#5ffae2;"></div>
+        <div class="w3-col w3-center s12 m10 l10 w3-padding hidden " style="background:#fa5f77;border: none">
+            <span style="font-size: 8vmax;color: white;line-height: 10vmax">84%</span><br>
+            of patients with complete or advanced AVB, regardless of the location of block,
+            underwent successful permanent HBP.
+            <div class="ref">
+                <a href="https://www.sciencedirect.com/science/article/pii/S2405500X15003631?via%3Dihub" target="_blank">
+                Vijayaraman P. JACC EP 2015.
+                </a>
+            </div>       
+        </div>
+         
     </div>
     
     
     <div class="w3-btn next" onmouseover="blockNav(2)"></div>
 </div>
 
-<div id="demo"></div>
+
 <!--end pointer-->
 </div>
 
@@ -469,7 +487,6 @@ function curtainMH(cName,n){
     var base = cName.substr (0,8);
     var c = document.getElementsByClassName(base)
     var cNoStr = base.slice(-1);var cNo = Number(cNoStr)
-    document.getElementById('demo').innerHTML = base
 
     //reset
     if (n==curtainS[cNo]) {
