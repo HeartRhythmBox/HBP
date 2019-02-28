@@ -55,7 +55,15 @@ background-image: radial-gradient(farthest-side at 70% 35%, #FDE570, #FAE25F, #F
         padding: 0.3vmax;margin-right: 0.5vmax;display: none;color:#888}
 .ref{font-size:1vmax;color: #969696;font-family: 'Lato', sans-serif;padding-top:0.5vmax}
 
-.curtain1{font-size: 2.5vmax;border-right: white 1vmax solid;overflow: hidden;}
+.curtain0{font-size: 2.5vmax;border-right: white 1vmax solid;height: 90vh;width: 33.33%; 
+cursor: pointer;}
+.curtain0H {display: none;font-size: 2.5vmax;}
+.hidden {height: 90vh;border-right: white 1vmax solid;cursor: pointer;}
+
+@media only screen and (max-width: 600px){
+    .curtain0, .curtain0H, .hidden {height: fit-content}
+    .noMobile {display: none}
+}
 
 
 
@@ -183,14 +191,12 @@ background-image: radial-gradient(farthest-side at 70% 35%, #FDE570, #FAE25F, #F
     </div>    
 
     <!--content-->
+    
     <div class="w3-row w3-padding san" style="line-height: 2.5vmax;">
-        <div class="w3-col w3-padding w3-mobile s4 curtain1" style="background:#FAE25F;">
-            <div class="w3-cell">
+        <!--base-->    
+        <!--c0#0-->
+        <div class="w3-col w3-padding w3-mobile curtain0" style="background:#FAE25F;">
             <img src="media/longDissoc.png" style="width:100%">
-            </div>
-            <div class="w3-cell w3-padding" style="display:none">
-                <img src="media/TracingHBPinLBBB.png" style="width: 100%">
-            </div>
             <div style="margin-top:1vmax;">
                 The conduction system is perfectly designed.</div>
             <div class="ref">
@@ -198,7 +204,9 @@ background-image: radial-gradient(farthest-side at 70% 35%, #FDE570, #FAE25F, #F
                 AE Teng. J Electrocardiol 2016.
                 </a></div>
         </div>
-        <div class="w3-col s4 w3-padding w3-mobile curtain1" style="background:#5ffae2;">
+
+        <!--c0#1-->
+        <div class="w3-col w3-padding w3-mobile curtain0" style="background:#5ffae2;">
             <img src="media/mechHisCapture.png" style="width:100%">
             <div style="margin-top:1vmax;">In complete heart block, the block mostly remains within the bundle of His.</div>
             <div class="ref">
@@ -207,8 +215,9 @@ background-image: radial-gradient(farthest-side at 70% 35%, #FDE570, #FAE25F, #F
                 </a>
             </div>
         </div>
-        <div class="w3-col s4 w3-mobile w3-center curtain1" 
-        style="background:#fa5f77;border-right: 0;padding: 2vmax">
+        
+        <!--c0#2-->
+        <div class="w3-col w3-mobile w3-center curtain0" style="background:#fa5f77;border-right: 0;padding: 2vmax">
             <span style="font-size: 8vmax;color: white;line-height: 10vmax">84%</span><br>
             of patients with complete or advanced AVB, regardless of the location of block,
             underwent successful permanent HBP.
@@ -218,8 +227,49 @@ background-image: radial-gradient(farthest-side at 70% 35%, #FDE570, #FAE25F, #F
                 </a>
             </div>
         </div>
+    
+        <!--click0-->
+        <div class="curtain0H">
+        <div class="w3-col s12 m10 l10 w3-padding w3-mobile hidden" style="background:#FAE25F;">
+            <div class="w3-row">
+            <div class="w3-cell w3-padding">
+                <img src="media/longDissoc.png" style="width: 100%"></div>
+            <div class="w3-cell w3-padding">
+                <img src="media/TracingHBPinLBBB.png" style="width: 100%">
+            </div>
+                <div>The conduction system is perfectly designed.</div>
+            <div class="ref">
+                <a href="https://www.sciencedirect.com/science/article/pii/S0022073616300917?via%3Dihub" target="_blank">
+                AE Teng. J Electrocardiol 2016.
+                </a></div>
+            </div>
+        </div>
+
+        <div class="w3-col s0 m1 l1 w3-padding hidden" style="background:#5ffae2;"></div>
+        <div class="w3-col s0 m1 l1 hidden" style="background:#fa5f77;border: none"></div>
+        </div>
+
+        <!--click1-->
+        <div class="curtain0H">
+        <div class="w3-col s0 m1 l1 w3-padding hidden" style="background:#FAE25F;"></div>
+        <div class="w3-col s12 m10 l10 w3-padding hidden " style="background:#5ffae2;">
+            <div class="w3-cell w3-padding w3-cell-middle">
+            <img src="media/mechHisCapture.png" style="width:100%"></div>
+            <div class="w3-cell w3-padding w3-cell-middle">
+            <div style="margin-top:1vmax;">In complete heart block, the block mostly remains within the bundle of His.</div>
+            <div class="ref">
+                <a href="https://www.sciencedirect.com/science/article/pii/S0022073616300814?via%3Dihub" target="_blank">
+                Vijayaraman P. J Electrocardiol 2016.
+                </a>
+            </div></div>
+        </div>
         
+        <div class="w3-col s0 m1 l1 hidden" style="background:#fa5f77;border: none"></div>
+        </div>
+
+        <!--click2-->
     </div>
+    
     
     <div class="w3-btn next" onmouseover="blockNav(2)"></div>
 </div>
@@ -274,10 +324,7 @@ window.addEventListener("keydown", function(event) {
         window.unblur()}
     })
 
-window.onload = function () {
-    unblur()
-    autoHeight()
-};
+window.onload = function () {unblur()};
 window.ontouchmove = function () {unblur()};
 window.onscroll = function () {scroll()};
 
@@ -329,9 +376,9 @@ function scroll() {
 }
 
 //auto height
-function autoHeight(){
+function autoHeight(cName){
     
-    var c1 = document.getElementsByClassName('curtain1');
+    var c1 = document.getElementsByClassName(cName);
     setHeight (c1)
 
     function setHeight(c){
@@ -378,6 +425,69 @@ function showMenu(n){
     menuStatus[n]=0
     }
 }
+
+//curtain
+window.onload = function(){
+    clickable('curtain0')
+    clickableH('curtain0H')
+    } 
+//curtain status -1,0,1,2
+
+
+function clickable(v){
+    var c = document.getElementsByClassName(v);
+    c[0].onclick = function(){curtainM(v,0)}
+    c[1].onclick = function(){curtainM(v,1)}      
+    c[2].onclick = function(){curtainM(v,2)}
+}
+function clickableH(v){
+    var c = document.getElementsByClassName(v);
+    c[0].onclick = function(){curtainMH(v,0)}
+    c[1].onclick = function(){curtainMH(v,1)}      
+    c[2].onclick = function(){curtainMH(v,2)}
+}
+
+var curtainS = [-1,-1]
+function curtainM(cName,n){
+    var c = document.getElementsByClassName(cName);
+    var cNoStr = cName.slice(-1);var cNo = Number(cNoStr)
+    var hidden = cName+'H';
+    var h = document.getElementsByClassName(hidden)
+      
+    //open
+    curtainS[cNo]=n;
+    var i;
+    for (i=0;i<c.length;i++){
+        c[i].style.display = "none"
+    }
+    h[n].style.display = "block"
+    
+}
+
+function curtainMH(cName,n){
+    var h = document.getElementsByClassName(cName);
+    var base = cName.substr (0,8);
+    var c = document.getElementsByClassName(base)
+    var cNoStr = base.slice(-1);var cNo = Number(cNoStr)
+    document.getElementById('demo').innerHTML = base
+
+    //reset
+    if (n==curtainS[cNo]) {
+        var i;
+        h[n].style.display = "none"
+        for (i=0;i<c.length;i++){
+            c[i].style.display = "block"
+            curtainS[cNo]= -1
+        }
+    } else {curtainM(base,n)}
+    
+
+}
+    
+    
+    
+    
+
 
 </script>	
 
