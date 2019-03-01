@@ -165,7 +165,7 @@ cursor: pointer;}
         </div>
     </div>
     
-    <div class="w3-btn next" onmouseover="blockNav(2)"></div>
+    <div class="w3-btn next" onmouseover="blockNav(1)"></div>
 </div>
 
 <!--block 2-->
@@ -289,7 +289,7 @@ cursor: pointer;}
     </div>
     
     
-    <div class="w3-btn next" onmouseover="blockNav(2)"></div>
+    <div class="w3-btn next" onmouseover="blockNav(1)"></div>
 </div>
 
 
@@ -344,7 +344,6 @@ window.addEventListener("keydown", function(event) {
 
 window.onload = function () {unblur()};
 window.ontouchmove = function () {unblur()};
-window.onscroll = function () {scroll()};
 
 //pointer
 var pSwitch = 0;
@@ -379,18 +378,6 @@ function pointer() {
     p[0].style.display = "inline";
     p[0].style.left = x+"px"; 
     p[0].style.top = y+"px";}
-}
-
-//auto scroll
-function scroll() {
-    menu = document.getElementsByClassName("menu");
-    block = document.getElementsByClassName('block');
-    l = (block.length)-1;
-    hideMenu();   
-    if (window.pageYOffset>=window.innerHeight && (window.pageYOffset<block[l].offsetTop)){
-        menu[0].style.display="block"}
-    else {
-        menu[0].style.display="none"}
 }
 
 //auto height
