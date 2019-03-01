@@ -146,10 +146,43 @@ cursor: pointer;}
                 class="noLine" target="_blank">
                 <i class="fab fa-facebook-square" title="FB: @HeartRhythmBox"></i></a>
             </span>&nbsp;&bullet;
-            <span class="pointerSwitch" onclick="pointerSwitch(1)">turn on pointer</span>
+            <span class="pointerSwitch" onclick="pointerSwitch(0)">turn on pointer</span>
         </span>
         <span id="BlkNoBar">
         <span style="background-color: #FACF1A"> &nbsp;&nbsp;02&nbsp; </span>
+        <span style="background-color: #555;color:white"> &nbsp;&nbsp;10&nbsp;&nbsp;</span>
+        </span>
+    </div>    
+
+    <!--content-->
+    <div class="w3-row san w3-center w3-bold w3-text-white" style="background-color:#F0BC18;font-size: 4vmax">
+        ECG Characteristics of His Bundle Pacing
+        <img src="media/ECGHBPinLBBB.png" style="width: 100%;padding: 1vmax">
+        <div class="ref">
+        <a href="https://www.heartrhythmjournal.com/article/S1547-5271(17)31310-3/fulltext">
+        Vijayaraman et al. Heart Rhythm 2018.
+        </a></div>
+    </div>
+    
+    <div class="w3-btn next" onmouseover="blockNav(1)"></div>
+</div>
+
+<!--block 2-->
+<div class="block">
+    <div class="w3-row serif" style="padding-left: 0.5vmax;color: #555555;font-size: 1.8vmax;">
+        <i class="fas fa-bars menu w3-hover-text-grey" title="menu" onclick="showMenu(2)"></i>
+        <!--menu-->
+        <span class="mItem">
+            <span  onclick="showMenu(2)"><a href="#top">
+                <i class="fas fa-arrow-circle-up" title="to Top"></i></a></span>&nbsp;&bullet;
+            <span  onclick="showMenu(2)"><a href="https://www.facebook.com/HeartRhythmBox" 
+                class="noLine" target="_blank">
+                <i class="fab fa-facebook-square" title="FB: @HeartRhythmBox"></i></a>
+            </span>&nbsp;&bullet;
+            <span class="pointerSwitch" onclick="pointerSwitch(1)">turn on pointer</span>
+        </span>
+        <span id="BlkNoBar">
+        <span style="background-color: #FACF1A"> &nbsp;&nbsp;03&nbsp; </span>
         <span style="background-color: #555;color:white"> &nbsp;&nbsp;10&nbsp;&nbsp;</span>
         </span>
     </div>    
@@ -168,22 +201,22 @@ cursor: pointer;}
     <div class="w3-btn next" onmouseover="blockNav(1)"></div>
 </div>
 
-<!--block 2-->
+<!--block 3-->
 <div class="block">
     <div class="w3-row serif" style="padding-left: 0.5vmax;color: #555555;font-size: 1.8vmax;">
-        <i class="fas fa-bars menu w3-hover-text-grey" title="menu" onclick="showMenu(2)"></i>
+        <i class="fas fa-bars menu w3-hover-text-grey" title="menu" onclick="showMenu(3)"></i>
         <!--menu-->
         <span class="mItem">
-            <span  onclick="showMenu(2)"><a href="#top">
+            <span  onclick="showMenu(3)"><a href="#top">
                 <i class="fas fa-arrow-circle-up" title="to Top"></i></a></span>&nbsp;&bullet;
-            <span  onclick="showMenu(2)"><a href="https://www.facebook.com/HeartRhythmBox" 
+            <span  onclick="showMenu(3)"><a href="https://www.facebook.com/HeartRhythmBox" 
                 class="noLine" target="_blank">
                 <i class="fab fa-facebook-square" title="FB: @HeartRhythmBox"></i></a>
             </span>&nbsp;&bullet;
             <span class="pointerSwitch" onclick="pointerSwitch(2)">turn on pointer</span>
         </span>
         <span id="BlkNoBar">
-        <span style="background-color: #FACF1A"> &nbsp;&nbsp;03&nbsp; </span>
+        <span style="background-color: #FACF1A"> &nbsp;&nbsp;04&nbsp; </span>
         <span style="background-color: #555;color:white"> &nbsp;&nbsp;10&nbsp;&nbsp;</span>
         </span>
     </div>    
@@ -291,7 +324,7 @@ cursor: pointer;}
     
     <div class="w3-btn next" onmouseover="blockNav(1)"></div>
 </div>
-
+<div id="demo"></div>
 
 <!--end pointer-->
 </div>
@@ -316,13 +349,6 @@ cursor: pointer;}
 <script src="block navigation.js" ></script>
 <script>
 
-window.addEventListener("keydown", function(event) {
-        event.preventDefault();
-        if (event.keyCode===32) {
-        var p = document.getElementsByClassName("pointer");
-        p[0].style.display = "none";}
-    })
-
 //up arrow
 window.addEventListener("keydown", function(event) {
     event.preventDefault();
@@ -340,6 +366,12 @@ window.addEventListener("keydown", function(event) {
         event.preventDefault();
         if (event.keyCode===27) {
         window.unblur()}
+    })
+
+window.addEventListener("keydown", function(event) {
+        event.preventDefault();
+        if (event.keyCode===80) {
+        pointerSwitch()}
     })
 
 window.onload = function () {unblur()};
@@ -434,10 +466,8 @@ function showMenu(n){
 //curtain
 window.onload = function(){
     clickable('curtain0')
-    clickableH('curtain0H')
+    clickableH('curtain0H','hidden')
     } 
-//curtain status -1,0,1,2
-
 
 function clickable(v){
     var c = document.getElementsByClassName(v);
@@ -445,13 +475,20 @@ function clickable(v){
     c[1].onclick = function(){curtainM(v,1)}      
     c[2].onclick = function(){curtainM(v,2)}
 }
-function clickableH(v){
-    var c = document.getElementsByClassName(v);
-    c[0].onclick = function(){curtainMH(v,0)}
-    c[1].onclick = function(){curtainMH(v,1)}      
-    c[2].onclick = function(){curtainMH(v,2)}
+function clickableH(v, h){
+    var c = document.getElementsByClassName(h);
+    c[0].onclick = function(){curtainMH(v,0,0)}
+    c[1].onclick = function(){curtainMH(v,0,1)}      
+    c[2].onclick = function(){curtainMH(v,0,2)}
+    c[3].onclick = function(){curtainMH(v,1,0)}
+    c[4].onclick = function(){curtainMH(v,1,1)}      
+    c[5].onclick = function(){curtainMH(v,1,2)}
+    c[6].onclick = function(){curtainMH(v,2,0)}
+    c[7].onclick = function(){curtainMH(v,2,1)}      
+    c[8].onclick = function(){curtainMH(v,2,2)}
 }
 
+//curtain status -1,0,1,2
 var curtainS = [-1,-1]
 function curtainM(cName,n){
     var c = document.getElementsByClassName(cName);
@@ -469,23 +506,22 @@ function curtainM(cName,n){
     
 }
 
-function curtainMH(cName,n){
+function curtainMH(cName,n,s){
     var h = document.getElementsByClassName(cName);
     var base = cName.substr (0,8);
     var c = document.getElementsByClassName(base)
     var cNoStr = base.slice(-1);var cNo = Number(cNoStr)
-
+    
+    document.getElementById('demo').innerHTML = 'base ='+ base + ' cName ='+ cName + 'n =' + n;
     //reset
-    if (n==curtainS[cNo]) {
+    if (s!=curtainS[cNo]) {
         var i;
-        h[n].style.display = "none"
         for (i=0;i<c.length;i++){
             c[i].style.display = "block"
+            h[i].style.display = "none"
             curtainS[cNo]= -1
         }
-    } else {curtainM(base,n)}
-    
-
+    } 
 }
     
     
