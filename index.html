@@ -596,7 +596,7 @@ function curtainM(cName,n){
     var c = document.getElementsByClassName(cName);
     var cNoStr = cName.slice(-1);var cNo = Number(cNoStr)
     var hidden = cName+'H';
-    var h = document.getElementsByClassName('hidden')
+    var h = document.getElementsByClassName(hidden)
       
     //open
     curtainS[cNo]=n;
@@ -619,7 +619,7 @@ function curtainMH(cName,n,s){
         var i;
         for (i=0;i<c.length;i++){
             c[i].style.display = "block"
-            h[i].style.display = "none"
+            cName[i].style.display = "none"
             curtainS[cNo]= -1
         }
     } 
