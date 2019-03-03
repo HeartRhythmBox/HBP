@@ -66,7 +66,7 @@ cursor: pointer;}
 }
 
 .tab {background-color: #FDE570}
-.tabContent {background-color: #ddd;padding: 2vmax;visibility: hidden}
+.tabContent {background-color: #ddd;padding: 2vmax;visibility: hidden;}
 
 </style>
 
@@ -378,7 +378,7 @@ cursor: pointer;}
         <div class="w3-row w3-center w3-mobile serif" style="font-size: 5vmax;color: #555555">
             CRT is a proven therapy ...BUT...
         </div>
-        <div id="bar" class="w3-bar san w3-center" style="font-size: 3vmax;border-bottom: #FACF1A solid 0.2vmax;margin-top: 1vmax">
+        <div class="w3-bar san w3-center" style="font-size: 3vmax;border-bottom: #555 solid 0.2vmax;margin-top: 1vmax">
             <div class="w3-bar-item w3-button w3-mobile tab" style="padding: 0.2vmax 2vmax;border: 0.1vmax solid white;
             border-top-right-radius: 2vmax;border-top-left-radius: 2vmax">
                 Dyssynchrony has to be bad enough.</div>
@@ -387,12 +387,12 @@ cursor: pointer;}
                 LV function has to be poor enough.
             </div>
         </div>
-        <!--tab1-->
+        <!--tab0-->
         <div class="w3-row w3-mobile w3-center tabContent">
             <div class="w3-cell-row">
-            <div class="w3-cell w3-cell-middle w3-padding">
+            <div class="w3-cell w3-cell-middle">
             <img src="media/QRSandLBBB.png" style="width: 100%"></div>
-            <div class="w3-cell w3-cell-middle w3-padding">
+            <div class="w3-cell w3-cell-middle">
                 <img src="media/QRSandNLBBB.png" style="width: 100%"></div>
             </div>
             <div class="ref">
@@ -402,6 +402,23 @@ cursor: pointer;}
                 </a>
             </div>
         </div>
+
+        <!--tab1-->
+        <div class="w3-row w3-mobile w3-center tabContent">
+            <div class="w3-col s6 w3-mobile w3-padding">
+            <img src="media/BioPace.png" style="width: 100%"></div>
+            <div class="w3-col s6 w3-mobile san" style="font-size:3vmax;padding: 2vmax">
+            Benefits of CRT over RV pacing in patients with AV block with near normal LVEF
+            is <span style="font-weight:800"> UNCLEAR.</span>
+            </div>
+            <div class="ref">
+                <a href="http://clinicaltrialresults.org/Slides/TCT%202014/Blanc_Biopace.pdf" target="_blank">
+                BIOPACE Preliminary Results
+                </a>
+            </div>
+        </div>
+
+
     </div>
     
     <div class="w3-btn next" onmouseover="blockNav(1)"></div>
@@ -620,10 +637,13 @@ function clickableTab(name){
     function showTab(n){
         var i;
         for (i=0;i<tab.length;i++){
-            tab[i].style.backgroundColor ="#fde570"
-            content[i].style.visibility = "hidden"
+        tab[i].style.backgroundColor ="#fde570"
+        content[i].style.display = "none"
+        tab[i].style.borderBottom = "none"
         }
         tab[n].style.backgroundColor = "#ddd"
+        tab[n].style.borderBottom = "solid #555 0.5vmax"
+        content[n].style.display = "block"
         content[n].style.visibility = "visible"
     } 
 }
