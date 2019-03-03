@@ -564,6 +564,7 @@ function showMenu(n){
 
 //curtain
 window.onload = function(){
+    clickableTab('tab')
     if (screen.width>600){
     clickable('curtain0')
     clickableH('curtain0H','hidden')
@@ -595,7 +596,7 @@ function curtainM(cName,n){
     var c = document.getElementsByClassName(cName);
     var cNoStr = cName.slice(-1);var cNo = Number(cNoStr)
     var hidden = cName+'H';
-    var h = document.getElementsByClassName(hidden)
+    var h = document.getElementsByClassName('hidden')
       
     //open
     curtainS[cNo]=n;
@@ -608,12 +609,11 @@ function curtainM(cName,n){
 }
 
 function curtainMH(cName,n,s){
-    var h = document.getElementsByClassName(cName);
+    var h = document.getElementsByClassName('hidden');
     var base = cName.substr (0,8);
     var c = document.getElementsByClassName(base)
     var cNoStr = base.slice(-1);var cNo = Number(cNoStr)
     
-    document.getElementById('demo').innerHTML = 'base ='+ base + ' cName ='+ cName + 'n =' + n;
     //reset
     if (s!=n) {
         var i;
