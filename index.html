@@ -580,7 +580,6 @@ function clickable(v){
 }
 function clickableH(v, h){
     var c = document.getElementsByClassName(h);
-    document.getElementById('demo').innerHTML = 'click'
     c[0].onclick = function(){curtainMH(v,0,0)}
     c[1].onclick = function(){curtainMH(v,0,1)}      
     c[2].onclick = function(){curtainMH(v,0,2)}
@@ -607,11 +606,11 @@ function curtainM(cName,n){
 }
 
 function curtainMH(cName,n,s){
-    document.getElementById('demo').innerHTML = n + 'and' + s;
+    
     var h = document.getElementsByClassName('hidden');
     var base = cName.substr (0,8);
     var c = document.getElementsByClassName(base);
-    
+    document.getElementById('demo').innerHTML = cName + 'length =' + cName.length;
     
     //reset
     if (s!=n) {
