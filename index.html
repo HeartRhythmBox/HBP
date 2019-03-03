@@ -613,9 +613,9 @@ function curtainMH(cName,n,s){
     
     //reset
     if (s!=n) {
+        cName[n].style.display = "none"
         var i;
         for (i=0;i<c.length;i++){
-            cName[i].style.display = "none"
             c[i].style.display = "block"
         }
         var j;
