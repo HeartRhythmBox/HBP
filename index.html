@@ -351,7 +351,8 @@ cursor: pointer;}
     
     <div class="w3-btn next" onmouseover="blockNav(1)"></div>
 </div>
-
+<div id="demo"></div>
+    
 <!--block 4-->
 <div class="block">
     <div class="w3-row serif" style="padding-left: 0.5vmax;color: #555555;font-size: 1.8vmax;">
@@ -590,16 +591,12 @@ function clickableH(v, h){
     c[8].onclick = function(){curtainMH(v,2,2)}
 }
 
-//curtain status -1,0,1,2
-var curtainS = [-1,-1]
 function curtainM(cName,n){
     var c = document.getElementsByClassName(cName);
-    var cNoStr = cName.slice(-1);var cNo = Number(cNoStr)
     var hidden = cName+'H';
     var h = document.getElementsByClassName(hidden)
       
     //open
-    curtainS[cNo]=n;
     var i;
     for (i=0;i<c.length;i++){
         c[i].style.display = "none"
@@ -613,14 +610,13 @@ function curtainMH(cName,n,s){
     var base = cName.substr (0,8);
     var c = document.getElementsByClassName(base)
     var cNoStr = base.slice(-1);var cNo = Number(cNoStr)
-    
+    document.getElementById('demo').innerHTML = c.length + 'and' + hidden.length
     //reset
     if (s!=n) {
         var i;
         for (i=0;i<c.length;i++){
             c[i].style.display = "block"
             cName[i].style.display = "none"
-            curtainS[cNo]= -1
         }
         var j;
         for (j=0;j<h.length;j++){
