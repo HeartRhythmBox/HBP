@@ -55,14 +55,14 @@ background-image: radial-gradient(farthest-side at 70% 35%, #FDE570, #FAE25F, #F
         padding: 0.3vmax;margin-right: 0.5vmax;display: none;color:#888}
 .ref{font-size:1vmax;color: #969696;font-family: 'Lato', sans-serif;padding-top:0.5vmax}
 
-.curtain0{font-size: 2.5vmax;border-right: white 1vmax solid;height: 90vh;width: 33.33%; 
+.curtain0, .curtain1 {font-size: 2.5vmax;border-right: white 1vmax solid;height: 90vh;width: 33.33%; 
 cursor: pointer;}
-.curtain0H {display: none;font-size: 2.5vmax;}
-.hidden {height: 90vh;border-right: white 1vmax solid;cursor: pointer;}
+.curtain0H,.curtain1H  {display: none;font-size: 2.5vmax;}
+.hidden, .hidden1 {height: 90vh;border-right: white 1vmax solid;cursor: pointer;}
 .mobileOnly {display: none}
 
 @media only screen and (max-width: 600px){
-    .curtain0, .curtain0H, .hidden {height: fit-content}
+    .curtain0, .curtain0H, .hidden, .curtain1, .curtain1H, .hidden1 {height: fit-content}
     .noMobile {display: none}
     .mobileOnly {display: block}
 }
@@ -361,12 +361,12 @@ cursor: pointer;}
 <!--block 4 gaps in CRT-->
 <div class="block">
     <div class="w3-row serif" style="padding-left: 0.5vmax;color: #555555;font-size: 1.8vmax;">
-        <i class="fas fa-bars menu w3-hover-text-grey" title="menu" onclick="showMenu(2)"></i>
+        <i class="fas fa-bars menu w3-hover-text-grey" title="menu" onclick="showMenu(4)"></i>
         <!--menu-->
         <span class="mItem">
-            <span  onclick="showMenu(2)"><a href="#top">
+            <span  onclick="showMenu(4)"><a href="#top">
                 <i class="fas fa-arrow-circle-up" title="to Top"></i></a></span>&nbsp;&bullet;
-            <span  onclick="showMenu(2)"><a href="https://www.facebook.com/HeartRhythmBox" 
+            <span  onclick="showMenu(4)"><a href="https://www.facebook.com/HeartRhythmBox" 
                 class="noLine" target="_blank">
                 <i class="fab fa-facebook-square" title="FB: @HeartRhythmBox"></i></a>
             </span>&nbsp;&bullet;
@@ -440,12 +440,12 @@ cursor: pointer;}
 <!--block 5 curtain1 proarrhythmic-->
 <div class="block">
     <div class="w3-row serif" style="padding-left: 0.5vmax;color: #555555;font-size: 1.8vmax;">
-        <i class="fas fa-bars menu w3-hover-text-grey" title="menu" onclick="showMenu(3)"></i>
+        <i class="fas fa-bars menu w3-hover-text-grey" title="menu" onclick="showMenu(5)"></i>
         <!--menu-->
         <span class="mItem">
-            <span  onclick="showMenu(3)"><a href="#top">
+            <span  onclick="showMenu(5)"><a href="#top">
                 <i class="fas fa-arrow-circle-up" title="to Top"></i></a></span>&nbsp;&bullet;
-            <span  onclick="showMenu(3)"><a href="https://www.facebook.com/HeartRhythmBox" 
+            <span  onclick="showMenu(5)"><a href="https://www.facebook.com/HeartRhythmBox" 
                 class="noLine" target="_blank">
                 <i class="fab fa-facebook-square" title="FB: @HeartRhythmBox"></i></a>
             </span>&nbsp;&bullet;
@@ -463,61 +463,77 @@ cursor: pointer;}
     <!--base-->
     <div class="w3-row w3-padding san" style="line-height: 2.5vmax;">
             
-        <!--c0#0-->
-        <div class="w3-col w3-padding w3-mobile curtain0" style="background:#FAE25F;">
+        <!--c1#0-->
+        <div class="w3-col w3-padding w3-mobile curtain1" style="background:#FAE25F;">
             <img src="media/endoVSepiPacing.png" style="width:100%">
             <div class="w3-row" style="margin-top: 1vmax">
                 Epicardial pacing reverses the normal activation sequence.
             </div>    
             <div class="ref">
-                <a href="https://www.ahajournals.org/doi/full/10.1161/01.CIR.0000048126.07819.37">
+                <a href="https://www.ahajournals.org/doi/full/10.1161/01.CIR.0000048126.07819.37" target="_blank">
                 Circulation 2003.</a>
             </div>
         </div>
 
-        <!--c0#1-->
-        <div class="w3-col w3-padding w3-mobile curtain0" style="background:#5ffae2;">
+        <!--c1#1-->
+        <div class="w3-col w3-padding w3-mobile curtain1" style="background:#5ffae2;">
             <img src="media/tdPCRT.png" style="width: 100%">
             <div class="w3-row" style="margin-top: 1vmax">
-            and may cause polymorphic VT.</div>
+            ...and may cause polymorphic VT.</div>
         </div>
         
-        <!--c0#2-->
-        <div class="w3-col w3-mobile w3-center curtain0" style="background:#fa5f77;border-right: 0;padding: 2vmax">
-            and may increase risk of sudden cardiac death.
+        <!--c1#2-->
+        <div class="w3-col w3-mobile w3-center curtain1 w3-padding" style="background:#fa5f77;border-right: 0;">
+            <img src="media/COMPANION.png" style="width: 100%;">
+            <div class="w3-row" style="margin-top: 1vmax">
+            ...and may increase risk of sudden cardiac death.</div>
+            <div class="ref">
+                <a href="https://www.ahajournals.org/doi/full/10.1161/CIRCULATIONAHA.106.629261" target="_blank">
+                Circulation 2006.</a>
+            </div>
         </div>
     </div>
         
     <!--click0-->
-    <div class="w3-row w3-padding san curtain0H">
+    <div class="w3-row w3-padding san curtain1H">
     
-        <div class="w3-col s12 m10 l10 w3-padding w3-mobile hidden" style="background:#FAE25F;">
+        <div class="w3-col s12 m10 l10 w3-padding w3-mobile hidden1" style="background:#FAE25F;">
+            <div class="w3-cell w3-padding">
+            <img src="media/endoVSepiPacing.png" style="width:100%"></div>
+            <div class="w3-cell w3-padding" style="margin-top: 1vmax">
+                Epicardial pacing reverses the normal activation sequence leading to prolongation of
+                QT, JT, and transmural dispersion of repolarization (TDR).
+                <div class="ref">
+                    <a href="https://www.ahajournals.org/doi/full/10.1161/01.CIR.0000048126.07819.37" target="_blank">
+                    Circulation 2003.</a>
+                </div>    
+            </div>
+            </div>    
             
-        </div>
 
-        <div class="w3-col s0 m1 l1 w3-padding hidden" style="background:#5ffae2;"></div>
-        <div class="w3-col s0 m1 l1 hidden" style="background:#fa5f77;border: none"></div>
+        <div class="w3-col s0 m1 l1 w3-padding hidden1" style="background:#5ffae2;"></div>
+        <div class="w3-col s0 m1 l1 hidden1" style="background:#fa5f77;border: none"></div>
        
     </div>
 
     <!--click1-->
-    <div class="w3-row w3-padding san curtain0H">
+    <div class="w3-row w3-padding san curtain1H">
        
-        <div class="w3-col s0 m1 l1 w3-padding hidden" style="background:#FAE25F;"></div>
-        <div class="w3-col w3-center s12 m10 l10 w3-padding hidden " style="background:#5ffae2;">
+        <div class="w3-col s0 m1 l1 w3-padding hidden1" style="background:#FAE25F;"></div>
+        <div class="w3-col w3-center s12 m10 l10 w3-padding hidden1" style="background:#5ffae2;">
                   
         </div>
                
-        <div class="w3-col s0 m1 l1 hidden" style="background:#fa5f77;border: none"></div>
+        <div class="w3-col s0 m1 l1 hidden1" style="background:#fa5f77;border: none"></div>
         
     </div>
 
     <!--click2-->
-    <div class="w3-row w3-padding san curtain0H">
+    <div class="w3-row w3-padding san curtain1H">
        
-        <div class="w3-col s0 m1 l1 w3-padding hidden" style="background:#FAE25F;"></div>
-        <div class="w3-col s0 m1 l1 w3-padding hidden" style="background:#5ffae2;"></div>
-        <div class="w3-col w3-center s12 m10 l10 hidden " style="background:#fa5f77;
+        <div class="w3-col s0 m1 l1 w3-padding hidden1" style="background:#FAE25F;"></div>
+        <div class="w3-col s0 m1 l1 w3-padding hidden1" style="background:#5ffae2;"></div>
+        <div class="w3-col w3-center s12 m10 l10 hidden1" style="background:#fa5f77;
         border: none;padding: 1.5vmax">
               
                  
@@ -655,7 +671,7 @@ function showDebateT(x) {
 }
 
 //menu
-var menuStatus = [0,0,0,0,0]
+var menuStatus = [0,0,0,0,0,0,0,0,0,0]
 function showMenu(n){
     var m = document.getElementsByClassName('mItem');
     if (menuStatus[n]==0){
@@ -672,6 +688,8 @@ window.onload = function(){
     if (screen.width>600){
     clickable('curtain0')
     clickableH('curtain0H','hidden')
+    clickable('curtain1')
+    clickableH('curtain1H','hidden1')
     clickableTab('tab')
     }
 } 
