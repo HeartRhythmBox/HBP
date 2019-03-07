@@ -73,6 +73,15 @@ cursor: pointer;}
     .tabContent {display: block}
 }
 
+.arg {height: 90vh;background-image: url(media/conductionY.png);
+    background-repeat: no-repeat;background-position-x: 40%;background-position-y: 50%}
+
+@media only screen and (max-width: 1024px){
+    .arg {height: auto;background-position: center;}
+}
+
+
+
 </style>
 
 <!--home-->
@@ -486,7 +495,7 @@ cursor: pointer;}
         <div class="w3-col w3-mobile w3-center curtain1 w3-padding" style="background:#fa5f77;border-right: 0;">
             <img src="media/COMPANION.png" style="width: 100%;">
             <div class="w3-row" style="margin-top: 1vmax">
-            ...and may increase risk of sudden cardiac death.</div>
+            ...and may increase risk of sudden cardiac death during the early stage.</div>
             <div class="ref" style="color:#ddd">
                 <a href="https://www.ahajournals.org/doi/full/10.1161/CIRCULATIONAHA.106.629261" target="_blank">
                 COMPANION Subanalysis. Circulation 2006.</a>
@@ -549,7 +558,7 @@ cursor: pointer;}
         border: none;">
         <img src="media/COMPANION.png" style="width:80%;max-height: 75vh">
         <div class="w3-row w3-padding">
-        ...and may increase risk of sudden cardiac death.</div>
+        ...and may increase risk of sudden cardiac death during the early stage.</div>
         <div class="ref" style="color:#ddd">
             <a href="https://www.ahajournals.org/doi/full/10.1161/CIRCULATIONAHA.106.629261" target="_blank">
             COMPANION Subanalysis. Circulation 2006.</a>
@@ -563,7 +572,7 @@ cursor: pointer;}
     <div class="w3-btn next" onmouseover="blockNav(1)"></div>
 </div>
 
-<!--block 6-->
+<!--block 6 vs RV pacing-->
 <div class="block">
     <div class="w3-row serif" style="padding-left: 0.5vmax;color: #555555;font-size: 1.8vmax;">
         <i class="fas fa-bars menu w3-hover-text-grey" title="menu" onclick="showMenu(6)"></i>
@@ -593,7 +602,7 @@ cursor: pointer;}
         <div class="w3-cell w3-cell-middle w3-mobile w3-padding san" 
         style="font-size: 2.5vmax;color: #F0BC18">
         <ul class="w3-ul" style="line-height:120%;padding: 1vmax">
-            <li>HBP Success rate = 92% </li>
+            <li>His Bundle Pacing (HBP) Success rate = 92% </li>
             <li>RV thresholds were significantly higher in HBP group (1.3V @ 0.8ms) vs. those in 
             RV pacing group (0.6V @ 0.5ms).</li>
             <li>The benefits were observed more in those with RV pacing>20%.</li>
@@ -608,7 +617,7 @@ cursor: pointer;}
     <div class="w3-btn next" onmouseover="blockNav(1)"></div>
 </div>
 
-<!--block 7-->
+<!--block 7 in RBBB-->
 <div class="block">
     <div class="w3-row serif" style="padding-left: 0.5vmax;color: #555555;font-size: 1.8vmax;">
         <i class="fas fa-bars menu w3-hover-text-grey" title="menu" onclick="showMenu(7)"></i>
@@ -638,7 +647,7 @@ cursor: pointer;}
         <div class="w3-cell w3-cell-middle w3-mobile" >
         <img src="media/inRbbbEf.png" style="width: 100%;padding: 0.5vmax">
         </div>
-        In patients with RBBB and reduced LVEF, HBP was associated with with significant 
+        In patients with RBBB and reduced LVEF, His bundle pacing was associated with with significant 
         narrowing QRS duration and improvement in LVEF at 1 year f/u.
         <div class="ref">
             <a href="https://www.ahajournals.org/doi/10.1161/CIRCEP.118.006613" target="_blank">
@@ -650,7 +659,7 @@ cursor: pointer;}
     <div class="w3-btn next" onmouseover="blockNav(1)"></div>
 </div>
 
-<!--block 8-->
+<!--block 8 vs CRT in HF LBBB-->
 <div class="block">
     <div class="w3-row serif" style="padding-left: 0.5vmax;color: #555555;font-size: 1.8vmax;">
         <i class="fas fa-bars menu w3-hover-text-grey" title="menu" onclick="showMenu(8)"></i>
@@ -690,6 +699,128 @@ cursor: pointer;}
                 </a>
             </div>
         </div>
+        
+    </div>
+    
+    <div class="w3-btn next" onmouseover="blockNav(1)"></div>
+</div>
+
+<!--block 9 alternative to CRT-->
+<div class="block">
+    <div class="w3-row serif" style="padding-left: 0.5vmax;color: #555555;font-size: 1.8vmax;">
+        <i class="fas fa-bars menu w3-hover-text-grey" title="menu" onclick="showMenu(9)"></i>
+        <!--menu-->
+        <span class="mItem">
+            <span  onclick="showMenu(9)"><a href="#top">
+                <i class="fas fa-arrow-circle-up" title="to Top"></i></a></span>&nbsp;&bullet;
+            <span  onclick="showMenu(9)"><a href="https://www.facebook.com/HeartRhythmBox" 
+                class="noLine" target="_blank">
+                <i class="fab fa-facebook-square" title="FB: @HeartRhythmBox"></i></a>
+            </span>&nbsp;&bullet;
+            <span class="pointerSwitch" onclick="pointerSwitch(1)">turn on pointer</span>
+        </span>
+        <span id="BlkNoBar">
+        <span style="background-color: #FACF1A"> &nbsp;&nbsp;10&nbsp; </span>
+        <span style="background-color: #555;color:white"> &nbsp;&nbsp;10&nbsp;&nbsp;</span>
+        <span class="w3-right w3-border-bottom" style="font-size: 2.5vmax;margin:0 1.5vmax 0 1.5vmax">
+            as an alternative to CRT.</span>
+        </span>
+    </div>    
+
+    <!--content-->
+    <div class="w3-row san" style="background-color:#FDE570;margin-top: 0.5vmax;font-size: 2.5vmax;">
+        <div class="w3-cell w3-center w3-mobile w3-cell-middle">
+            <img src="media/alternativeCrtA.png" style="width: 100%;padding: 0.2vmax">
+        </div>    
+        <div class="w3-cell w3-cell-middle w3-mobile" >
+        <img src="media/alternativeCrtB.png" style="width: 100%;padding:0.1vmax">
+        </div>
+        <div class="w3-container" style="line-height: 120%;margin-top: 0.5vmax;
+        border-top:#FACF1A solid 0.5vmax;font-weight: 800">
+            His Bundle Pacing may be considered as a rescue strategy for failed BiV Pacing and
+            may be a reasonable primary alternative to BiV Pacing for CRT.
+            <div class="ref" style="font-weight: 400;line-height: 120%;">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1547527117312079" target="_blank">
+                Heart Rhythm 2018.
+                </a>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="w3-btn next" onmouseover="blockNav(1)"></div>
+</div>
+
+<!--block 10 long term-->
+<div class="block">
+    <div class="w3-row serif" style="padding-left: 0.5vmax;color: #555555;font-size: 1.8vmax;">
+        <i class="fas fa-bars menu w3-hover-text-grey" title="menu" onclick="showMenu(10)"></i>
+        <!--menu-->
+        <span class="mItem">
+            <span  onclick="showMenu(10)"><a href="#top">
+                <i class="fas fa-arrow-circle-up" title="to Top"></i></a></span>&nbsp;&bullet;
+            <span  onclick="showMenu(10)"><a href="https://www.facebook.com/HeartRhythmBox" 
+                class="noLine" target="_blank">
+                <i class="fab fa-facebook-square" title="FB: @HeartRhythmBox"></i></a>
+            </span>&nbsp;&bullet;
+            <span class="pointerSwitch" onclick="pointerSwitch(1)">turn on pointer</span>
+        </span>
+        <span id="BlkNoBar">
+        <span style="background-color: #FACF1A"> &nbsp;&nbsp;11&nbsp; </span>
+        <span style="background-color: #555;color:white"> &nbsp;&nbsp;10&nbsp;&nbsp;</span>
+        <span class="w3-right w3-border-bottom" style="font-size: 2.5vmax;margin:0 1.5vmax 0 1.5vmax">
+            Long Term</span>
+        </span>
+    </div>    
+
+    <!--content-->
+    <div class="w3-row san" style="background-color:#FDE570;margin-top: 0.5vmax;font-size: 2.5vmax;">
+        <div class="w3-cell w3-center w3-mobile w3-cell-middle">
+            <img src="media/longTerm.png" style="width: 100%;padding: 0.2vmax">
+        </div>    
+        <div class="w3-cell w3-cell-middle w3-mobile" >
+        <img src="media/longTermThreshold.png" style="width: 100%;padding:0.1vmax">
+        </div>
+        <div class="w3-container" style="line-height: 120%;margin-top: 0.5vmax;
+        border-top:#F0BC18 solid 0.5vmax;font-weight: 800">
+        At 3-year follow up, His bundle pacing improved LVEF, LVESV, and NYHA class in HF with LBBB.  
+            <div class="ref" style="font-weight: 400;line-height: 120%;">
+                <a href="https://heart.bmj.com/content/105/2/137.long" target="_blank">
+                Heart 2019.
+                </a>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="w3-btn next" onmouseover="blockNav(1)"></div>
+</div>
+
+<!--block 11 argument-->
+<div class="block">
+    <div class="w3-row serif" style="padding-left: 0.5vmax;color: #555555;font-size: 1.8vmax;">
+        <i class="fas fa-bars menu w3-hover-text-grey" title="menu" onclick="showMenu(10)"></i>
+        <!--menu-->
+        <span class="mItem">
+            <span  onclick="showMenu(10)"><a href="#top">
+                <i class="fas fa-arrow-circle-up" title="to Top"></i></a></span>&nbsp;&bullet;
+            <span  onclick="showMenu(10)"><a href="https://www.facebook.com/HeartRhythmBox" 
+                class="noLine" target="_blank">
+                <i class="fab fa-facebook-square" title="FB: @HeartRhythmBox"></i></a>
+            </span>&nbsp;&bullet;
+            <span class="pointerSwitch" onclick="pointerSwitch(1)">turn on pointer</span>
+        </span>
+        <span id="BlkNoBar">
+        <span style="background-color: #FACF1A"> &nbsp;&nbsp;11&nbsp; </span>
+        <span style="background-color: #555;color:white"> &nbsp;&nbsp;10&nbsp;&nbsp;</span>
+        <span class="w3-right w3-border-bottom" style="font-size: 2.5vmax;margin:0 1.5vmax 0 1.5vmax">
+            Arguments against HBP.</span>
+        </span>
+    </div>    
+
+    <!--content-->
+    <div class="w3-row san arg" style="background-color:#FAE25F;margin-top: 0.5vmax;
+    font-size: 2.5vmax;">
         
     </div>
     
