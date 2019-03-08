@@ -80,7 +80,9 @@ cursor: pointer;}
     .arg {height: auto;background-position: center;}
 }
 
-.argC {font-family: 'Abel', sans-serif;font-size: 2.5vmax;color: #444;text-align: left}
+.argC {font-family: 'Abel', sans-serif;font-size: 2.5vmax;color: #444;text-align: left;
+        margin-top:1vmax;font-weight: 700;width: 1440px;}
+
 
 
 </style>
@@ -831,20 +833,22 @@ cursor: pointer;}
         <span class="w3-btn w3-round-large w3-padding-small icon">
         <i class="fas fa-heart-broken" style="font-size: 4vmax;" title="not feasible in advanced disease"></i></span>
         </div>    
-
-        <div class="w3-content w3-center w3-padding">
-            <div class="argC">
-                Limited Data <br>
-                <span style="background-color:#5ffae2;color: black">HBP is still in the early stage. 
-                There is more data to come.
-                </span>
-            </div>
+        <div class="w3-center argC">
+        <div class="w3-cell-row w3-center">
+            <div class="w3-cell w3-cell-middle w3-padding-large w3-black">
+                Limited Data</div>
+            <div class="w3-cell w3-cell-middle w3-padding-large w3-white">    
+                HBP is still in the early stage. <br>
+                There is more data to come.</div>
+                
         </div>
+        </div>
+        
     </div>
     
     <div class="w3-btn next" onmouseover="blockNav(1)"></div>
 </div>
-
+<div id="demo"></div>
 
 <!--end pointer-->
 </div>
@@ -983,7 +987,7 @@ function showMenu(n){
     }
 }
 
-//curtain
+//onclick
 window.onload = function(){
     clickIcon('icon')
     if (screen.width>600){
@@ -1095,6 +1099,8 @@ function clickIcon(name){
         h[0].style.display = "block"
     }
 }
+
+
 
 </script>	
 
