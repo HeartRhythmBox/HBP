@@ -10,7 +10,8 @@
 <style>
 .gradient{width: 100%;height: 100vh;text-align: center;
 background-image: radial-gradient(farthest-side at 70% 35%, #FDE570, #FAE25F, #FACF1A,#F0BC18)}
-
+.animatedGd {width: 100%;height: 90vh;
+background-image: radial-gradient(farthest-side at 70% 35%, #FDE570, #FAE25F, #FACF1A,#F0BC18)}
 .sanB {font-family: 'Lato', sans-serif;}
 .san {font-family: 'Abel', sans-serif;}
 .serif {font-family: 'IM Fell English', serif;}
@@ -81,7 +82,7 @@ cursor: pointer;}
 }
 
 .argC {font-family: 'Abel', sans-serif;font-size: 2.5vmax;color: #444;
-        margin-top:1vmax;font-weight: 700;}
+        margin-top:2vmax;font-weight: 700;display: none}
 
 
 
@@ -802,20 +803,20 @@ cursor: pointer;}
 <!--block 11 argument-->
 <div class="block">
     <div class="w3-row serif" style="padding-left: 0.5vmax;color: #555555;font-size: 1.8vmax;">
-        <i class="fas fa-bars menu w3-hover-text-grey" title="menu" onclick="showMenu(10)"></i>
+        <i class="fas fa-bars menu w3-hover-text-grey" title="menu" onclick="showMenu(11)"></i>
         <!--menu-->
         <span class="mItem">
-            <span  onclick="showMenu(10)"><a href="#top">
+            <span  onclick="showMenu(11)"><a href="#top">
                 <i class="fas fa-arrow-circle-up" title="to Top"></i></a></span>&nbsp;&bullet;
-            <span  onclick="showMenu(10)"><a href="https://www.facebook.com/HeartRhythmBox" 
+            <span  onclick="showMenu(11)"><a href="https://www.facebook.com/HeartRhythmBox" 
                 class="noLine" target="_blank">
                 <i class="fab fa-facebook-square" title="FB: @HeartRhythmBox"></i></a>
             </span>&nbsp;&bullet;
             <span class="pointerSwitch" onclick="pointerSwitch(1)">turn on pointer</span>
         </span>
         <span id="BlkNoBar">
-        <span style="background-color: #FACF1A"> &nbsp;&nbsp;11&nbsp; </span>
-        <span style="background-color: #555;color:white"> &nbsp;&nbsp;10&nbsp;&nbsp;</span>
+        <span style="background-color: #FACF1A"> &nbsp;&nbsp;12&nbsp; </span>
+        <span style="background-color: #555;color:white"> &nbsp;&nbsp;13&nbsp;&nbsp;</span>
         </span>
     </div>    
 
@@ -832,26 +833,90 @@ cursor: pointer;}
         <i class="fas fa-bolt" style="font-size: 4vmax;" title="high threshold"></i></span>
         <span class="w3-btn w3-round-large w3-padding-small icon">
         <i class="fas fa-heart-broken" style="font-size: 4vmax;" title="not feasible in advanced disease"></i></span>
-        </div>    
-        <div class="w3-center argC">
-        
-            <span class="w3-black">
-                Limited Data</span>
-            <span class="w3-white">    
-                HBP is still in the early stage. <br>
-                There is more data to come.</span>
+        </div>  
+
+        <!--limited data-->
+        <div class="w3-row w3-padding argC hCenter">
+            <div class="w3-cell w3-cell-middle w3-mobile w3-padding-large w3-black w3-opacity hCenterL" style="text-align:right">
+                Limited Data</div>
+            
+            <div class="w3-cell w3-cell-middle w3-mobile w3-padding-large w3-white w3-opacity hCenterR" 
+            style="text-align:left;border-left: 1vmax #FAE25F solid">    
+                HBP is still in the early stage.<br>
+                There is more data to come.</div>
+            
+        </div>
+
+        <!--high threshold-->
+        <div class="w3-row w3-padding argC hCenter">
+                <div class="w3-cell w3-cell-middle w3-mobile w3-padding-large w3-black w3-opacity hCenterL" style="text-align:right">
+                    High Threshold</div>
+                <div class="w3-cell w3-cell-middle w3-mobile w3-padding-large w3-white w3-opacity hCenterR" 
+                style="text-align:left;border-left: 1vmax #FAE25F solid">    
+                    It's about the equipment NOT the concept.<br>
+                    It will get better with time. Remember CRT?</div>
                 
         </div>
+
+        <!--severe disease-->
+        <div class="w3-row w3-padding argC hCenter">
+            <div class="w3-cell w3-cell-middle w3-mobile w3-padding-large w3-black w3-opacity hCenterL" style="text-align:right">
+                    Not feasible in advanced conduction diseases.</div>
+                
+            <div class="w3-cell w3-cell-middle w3-mobile w3-padding-large w3-white w3-opacity hCenterR" 
+                style="text-align:left;border-left: 1vmax #FAE25F solid">    
+                    What would have work in those with advanced conduction disease?<br>
+                    CRT may provide ventricular capture but likely not ventricular synchronization.</div>
+                
         </div>
-        
+
+
     </div>
-    
     <div class="w3-btn next" onmouseover="blockNav(1)"></div>
 </div>
-<div id="demo"></div>
+
+<!--block 12 final-->
+<div class="block">
+        <div class="w3-row serif" style="padding-left: 0.5vmax;color: #555555;font-size: 1.8vmax;">
+            <i class="fas fa-bars menu w3-hover-text-grey" title="menu" onclick="showMenu(12)"></i>
+            <!--menu-->
+            <span class="mItem">
+                <span  onclick="showMenu(12)"><a href="#top">
+                    <i class="fas fa-arrow-circle-up" title="to Top"></i></a></span>&nbsp;&bullet;
+                <span  onclick="showMenu(12)"><a href="https://www.facebook.com/HeartRhythmBox" 
+                    class="noLine" target="_blank">
+                    <i class="fab fa-facebook-square" title="FB: @HeartRhythmBox"></i></a>
+                </span>&nbsp;&bullet;
+                <span class="pointerSwitch" onclick="pointerSwitch(1)">turn on pointer</span>
+            </span>
+            <span id="BlkNoBar">
+            <span style="background-color: #FACF1A"> &nbsp;&nbsp;13&nbsp; </span>
+            <span style="background-color: #555;color:white"> &nbsp;&nbsp;13&nbsp;&nbsp;</span>
+            </span>
+        </div>    
+    
+        <!--content-->
+        <div class="animatedGd">
+            <div class="w3-row w3-center w3-padding-large serif" style="font-size: 4vmax">
+                His Bundle Pacing is the new way to PACE.
+            </div>
+            <div class="w3-row w3-center lastBlk" onload="hCenter('lastBlk',0)">
+            <div class="w3-cell w3-cell-middle w3-padding w3-mobile lastBlkL">
+                <img src="media/actSeq.gif" style="width:100%;opacity: 0.8;">
+            </div>
+            <div class="w3-cell w3-cell-midlle w3-padding w3-mobile lastBlkR">
+                BECAUSE IT'S PHYSIOLOGIC.
+            </div>
+            </div>
+        </div>
+        
+        <div class="w3-btn next" onmouseover="blockNav(1)"></div>
+    </div>
+
 
 <!--end pointer-->
 </div>
+
 
 <!--bottom bar
 <div class="w3-row w3-center san" style="font-size: 1.1vmax;color:#868686">
@@ -938,9 +1003,9 @@ function pointer() {
 
 //auto height
 function autoHeight(cName){
-    
     var c1 = document.getElementsByClassName(cName);
     setHeight (c1)
+    
 
     function setHeight(c){
     //find content height
@@ -951,6 +1016,7 @@ function autoHeight(cName){
     }
     h.sort(function(a,b){return b-a})
     var maxH = h[0]
+   
     //set height
     var j;
     for (j=0;j<c.length;j++){
@@ -975,7 +1041,7 @@ function showDebateT(x) {
 }
 
 //menu
-var menuStatus = [0,0,0,0,0,0,0,0,0,0]
+var menuStatus = [0,0,0,0,0,0,0,0,0,0,0,0,0]
 function showMenu(n){
     var m = document.getElementsByClassName('mItem');
     if (menuStatus[n]==0){
@@ -990,6 +1056,7 @@ function showMenu(n){
 //onclick
 window.onload = function(){
     clickIcon('icon')
+    aGd('animatedGd')
     if (screen.width>600){
     clickable('curtain0')
     clickableH('curtain0H','hidden')
@@ -1085,18 +1152,66 @@ function clickIcon(name){
     title[0].style.cursor = "pointer"
     title[0].onclick = function() {reset()}
     var h = document.getElementsByClassName('hBlock')
+    var c = document.getElementsByClassName('argC')
 
     function showArg(n){
         h[0].style.display = "none";
         var i;
         for (i=0;i<icn.length;i++){
             icn[i].style.color = "#bbb"
+            c[i].style.display = "none"
         }    
         icn[n].style.color = "#555"
+        c[n].style.display = "block"
+        hCenter('hCenter',n)
     }
 
     function reset(){
         h[0].style.display = "block"
+        var i;
+        for (i=0;i<icn.length;i++){
+            icn[i].style.color = "#555"
+            c[i].style.display = "none"
+        }    
+    }
+}
+
+//autoCenter
+function hCenter(name,n){
+    if (screen.width>800){
+    var h = document.getElementsByClassName(name)
+    var nameL = name +'L'; var nameR = name+'R'
+    var L = document.getElementsByClassName(nameL)
+    var R = document.getElementsByClassName(nameR)
+    var scn = screen.width;
+    var width = L[n].clientWidth+R[n].clientWidth;
+    var margin = (scn-width)/2
+    h[n].style.marginLeft = margin + "px"}
+}
+
+
+function aGd(name){
+    var g = document.getElementsByClassName(name);
+    //background-image: radial-gradient(farthest-side at 70% 35%, #FDE570, #FAE25F, #FACF1A,#F0BC18)
+    var x =0; var y = Math.floor((Math.random() * 100) + 1);
+    var inc = true;
+    var id = setInterval(color, 85);
+    
+    function color(){
+        if (inc){
+            if (x==100){
+                inc = false;
+                y= Math.floor((Math.random() * 100) + 1);
+                x--;
+            } else {x++;}
+        } else {
+            if (x==0){
+                inc = true;
+                y= Math.floor((Math.random() * 100) + 1);
+                x++;
+            } else {x--;}
+        }
+    g[0].style.backgroundImage = "radial-gradient(farthest-side at " + x +"%" + y + "%, #FDE570, #FAE25F, #FACF1A,#F0BC18)"
     }
 }
 
