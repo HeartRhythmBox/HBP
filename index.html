@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href="https://fonts.googleapis.com/css?family=Lato|Abel|IM+Fell+English" rel="stylesheet">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 </head>
 <style>
@@ -74,12 +74,13 @@ cursor: pointer;}
 }
 
 .arg {height: 90vh;background-image: url(media/conductionY.png);
-    background-repeat: no-repeat;background-position-x: 10%;background-position-y: 50%}
+    background-repeat: no-repeat;background-position-x: 15%;background-position-y: 50%}
 
 @media only screen and (max-width: 1024px){
     .arg {height: auto;background-position: center;}
 }
 
+.argC {font-family: 'Abel', sans-serif;font-size: 2.5vmax;color: #444;text-align: left}
 
 
 </style>
@@ -813,31 +814,37 @@ cursor: pointer;}
         <span id="BlkNoBar">
         <span style="background-color: #FACF1A"> &nbsp;&nbsp;11&nbsp; </span>
         <span style="background-color: #555;color:white"> &nbsp;&nbsp;10&nbsp;&nbsp;</span>
-        <span class="w3-right w3-border-bottom" style="font-size: 2.5vmax;margin:0 1.5vmax 0 1.5vmax">
-            Arguments against HBP.</span>
         </span>
     </div>    
 
     <!--content-->
-    <div class="w3-row w3-padding-large sanB arg" style="background-color:#FAE25F;margin-top: 0.5vmax;
-    font-size: 3vmax;font-weight: 900;color: #555">
-        <div style="margin-top: 5vmax">
-        <i class="fas fa-chart-line" style="font-size: 4vmax;"></i>
-        &nbsp;&nbsp;&nbsp;Limited Data
-        </div>
-        <div style="margin-top: 5vmax">
-        
-        <i class="fas fa-power-off" style="font-size: 4vmax;"></i>
-        &nbsp;&nbsp;&nbsp;High threshold
-        </div>
-        <div style="margin-top: 5vmax">
-        <i class="fas fa-exclamation-triangle" style="font-size: 4vmax;"></i>
-        &nbsp;&nbsp;Not feasible in severe conduction defect
+    <div class="w3-row w3-center w3-padding-large san arg" style="background-color:#FAE25F;margin-top: 0.5vmax;
+    color: #555">
+        <div style="height: 20vh" class="hBlock noMobile"></div>
+        <div class="argT" style="font-size: 5vmax;font-weight: 900;margin-top: 2vmax;padding: 1vmax">
+        Arguments Against His Bundle Pacing</div>
+        <div class="w3-row">
+        <span class="w3-btn w3-round-large w3-padding-small icon">
+            <i class="fas fa-chart-line" style="font-size: 4vmax;" title="limited data"></i></span>
+        <span class="w3-btn w3-round-large w3-padding-small icon">   
+        <i class="fas fa-bolt" style="font-size: 4vmax;" title="high threshold"></i></span>
+        <span class="w3-btn w3-round-large w3-padding-small icon">
+        <i class="fas fa-heart-broken" style="font-size: 4vmax;" title="not feasible in advanced disease"></i></span>
+        </div>    
+
+        <div class="w3-content w3-center w3-padding">
+            <div class="argC">
+                Limited Data <br>
+                <span style="background-color:#5ffae2;color: black">HBP is still in the early stage. 
+                There is more data to come.
+                </span>
+            </div>
         </div>
     </div>
     
     <div class="w3-btn next" onmouseover="blockNav(1)"></div>
 </div>
+
 
 <!--end pointer-->
 </div>
@@ -978,6 +985,7 @@ function showMenu(n){
 
 //curtain
 window.onload = function(){
+    clickIcon('icon')
     if (screen.width>600){
     clickable('curtain0')
     clickableH('curtain0H','hidden')
@@ -1060,6 +1068,32 @@ function clickableTab(name){
         content[n].style.display = "block"
         
     } 
+}
+
+//icon
+function clickIcon(name){
+    var icn = document.getElementsByClassName(name)
+    icn[0].onclick = function() {showArg(0)}
+    icn[1].onclick = function() {showArg(1)}
+    icn[2].onclick = function() {showArg(2)}
+    
+    var title = document.getElementsByClassName('argT')
+    title[0].style.cursor = "pointer"
+    title[0].onclick = function() {reset()}
+    var h = document.getElementsByClassName('hBlock')
+
+    function showArg(n){
+        h[0].style.display = "none";
+        var i;
+        for (i=0;i<icn.length;i++){
+            icn[i].style.color = "#bbb"
+        }    
+        icn[n].style.color = "#555"
+    }
+
+    function reset(){
+        h[0].style.display = "block"
+    }
 }
 
 </script>	
