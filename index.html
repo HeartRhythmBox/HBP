@@ -1244,7 +1244,7 @@ function typeWriter() {
     if (iNo < txtArray[aNo].length) {
             document.getElementById("final").style.color = "#fdf6cf"
             document.getElementById("final").innerHTML += txtArray[aNo].charAt(iNo);
-            setTimeout(typeWriter, 80);iNo++;
+            setTimeout(typeWriter, 100);iNo++;
     }
     else {aNo++;iNo=0;
     document.getElementById("final").innerHTML += '<br>'
