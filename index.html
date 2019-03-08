@@ -833,13 +833,15 @@ cursor: pointer;}
         <span class="w3-btn w3-round-large w3-padding-small icon">
         <i class="fas fa-heart-broken" style="font-size: 4vmax;" title="not feasible in advanced disease"></i></span>
         </div>    
-        <div class="w3-row w3-padding argC">
-            <div class="w3-col s6 w3-mobile w3-padding-large" style="text-align:right">
+        <div class="w3-row w3-padding argC hCenter">
+            <div class="w3-cell w3-cell-middle w3-mobile w3-padding-large w3-black w3-opacity hCenterL" style="text-align:right">
                 Limited Data</span></div>
             
-            <div class="w3-col s6 w3-mobile w3-padding-large" style="text-align:left;border-left: 0.5vmax #f1f1f1 dotted">    
+            <div class="w3-cell w3-cell-middle w3-mobile w3-padding-large w3-white w3-opacity hCenterR" 
+            style="text-align:left;border-left: 0.5vmax #f1f1f1 dotted">    
                 HBP is still in the early stage.<br>
                 There is more data to come.</span></div>
+            
             </div>    
         </div>
         </div>
@@ -938,9 +940,9 @@ function pointer() {
 
 //auto height
 function autoHeight(cName){
-    
     var c1 = document.getElementsByClassName(cName);
     setHeight (c1)
+    
 
     function setHeight(c){
     //find content height
@@ -951,12 +953,27 @@ function autoHeight(cName){
     }
     h.sort(function(a,b){return b-a})
     var maxH = h[0]
+   
     //set height
     var j;
     for (j=0;j<c.length;j++){
         c[j].style.height = maxH+"px"
     }
     }
+}
+
+//autoCenter
+function hCenter(name){
+    var h = document.getElementsByClassName(name)
+    var nameL = name +'L'; var nameR = name+'R'
+    var L = document.getElementsByClassName(nameL)
+    var R = document.getElementsByClassName(nameR)
+    var scn = screen.width;
+    var i;
+    var width = L[0].clientWidth+R[0].clientWidth;
+    document.getElementById('demo').innerHTML = width
+    var margin = (scn-width)/2
+    h[0].style.marginLeft = margin + "px"
 }
 
 //show debate title
@@ -996,6 +1013,7 @@ window.onload = function(){
     clickable('curtain1')
     clickableH('curtain1H','hidden1')
     clickableTab('tab')
+    hCenter('hCenter')
     }
 } 
 
