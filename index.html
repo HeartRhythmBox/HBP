@@ -12,6 +12,9 @@
 background-image: radial-gradient(farthest-side at 70% 35%, #FDE570, #FAE25F, #FACF1A,#F0BC18)}
 .animatedGd {width: 100%;height: 85vh;
 background-image: radial-gradient(farthest-side at 70% 35%, #FDE570, #FAE25F, #FACF1A,#F0BC18)}
+@media only screen and (max-width: 600px){
+    .animatedGd {height: fit-content}
+}
 .sanB {font-family: 'Lato', sans-serif;}
 .san {font-family: 'Abel', sans-serif;}
 .serif {font-family: 'IM Fell English', serif;}
@@ -61,6 +64,7 @@ cursor: pointer;}
 .curtain0H,.curtain1H  {display: none;font-size: 2.5vmax;}
 .hidden, .hidden1 {height: 90vh;border-right: white 1vmax solid;cursor: pointer;}
 .mobileOnly {display: none}
+
 
 @media only screen and (max-width: 600px){
     .curtain0, .curtain0H, .hidden, .curtain1, .curtain1H, .hidden1 {height: fit-content}
@@ -1185,7 +1189,7 @@ function clickIcon(name){
 
 //autoCenter
 function hCenter(name,n){
-    if (screen.width>800){
+    if (screen.width>600){
     var h = document.getElementsByClassName(name)
     var nameL = name +'L'; var nameR = name+'R'
     var L = document.getElementsByClassName(nameL)
