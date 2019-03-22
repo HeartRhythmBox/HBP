@@ -1220,23 +1220,24 @@ function aGd(name){
     //background-image: radial-gradient(farthest-side at 70% 35%, #FDE570, #FAE25F, #FACF1A,#F0BC18)
     var x =0; var y = Math.floor((Math.random() * 100) + 1);
     var inc = true;
-    var id = setInterval(color, 85);
+    var id = setInterval(color, 35);
     
     function color(){
         if (inc){
             if (x==100){
                 inc = false;
-                y= Math.floor((Math.random() * 100) + 1);
+                yDelta= Math.floor((Math.random() * 20) + 1);y = y-yDelta;
                 x--;
             } else {x++;}
         } else {
             if (x==0){
                 inc = true;
-                y= Math.floor((Math.random() * 100) + 1);
+                yDelta= Math.floor((Math.random() * 20) + 1);y= y+yDelta;
                 x++;
             } else {x--;}
         }
-    g[0].style.backgroundImage = "radial-gradient(farthest-side at " + x +"%" + y + "%, #FAE25F, #FACF1A,#F0BC18)"
+    if (y<0){y=50};if (y>100){y=50}
+    g[0].style.backgroundImage = "radial-gradient(farthest-side at " + x +"%" + y + "%,#FDE570, #FAE25F, #FACF1A,#F0BC18)"
     }
 }
 
